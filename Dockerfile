@@ -30,7 +30,7 @@ COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # Create directories for configuration and data
-VOLUME ["/etc/bareos", "/data"]
+VOLUME ["/data"]
 
 # Environment variables for configuration
 ENV BAREOS_DIR_HOSTNAME="" \
