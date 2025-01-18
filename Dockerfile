@@ -32,5 +32,13 @@ RUN chmod +x /usr/local/bin/entrypoint.sh
 # Create directories for configuration and data
 VOLUME ["/etc/bareos", "/data"]
 
+# Environment variables for configuration
+ENV BAREOS_DIR_HOSTNAME="" \
+    BAREOS_DIR_PASSWORD="" \
+    BAREOS_DIR_ADDRESS="" \
+    BAREOS_CLIENT_NAME="" \
+    BAREOS_DIR_ADDITIONAL_PARAMS="" \
+    BAREOS_CLIENT_ADDITIONAL_PARAMS=""
+
 # Set entrypoint
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
